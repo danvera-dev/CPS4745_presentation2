@@ -102,7 +102,6 @@ $(document).on('change','#slider',function(e){  //when the slider is adjusted th
                 document.getElementById("CountyCT").innerHTML = "Number of counties in "+state_name+": " + countyCt;
                 pointsPerPixel = sliderVal; 
                 drawMapNew(dataCopy, eduMax, eduMin, hoMax, hoMin, pointsPerPixel); 
-                return pointsPerPixel;
             } else {
                 alert('Please select a state');
                 document.getElementById("slider").value = "50"; 
@@ -168,6 +167,7 @@ function drawMapNew(data, xMax, xMin, yMax, yMin, pointsPerPixel) {
             .attr("d", d3.geoPath())
             .attr("fill", function(d) { return color(d.value); })
     
+    //x axis label
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
@@ -175,6 +175,7 @@ function drawMapNew(data, xMax, xMin, yMax, yMin, pointsPerPixel) {
         .attr("y", height - 6)
         .text(edu_level + " (Percent)");
     
+    //y axis label
     svg.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")

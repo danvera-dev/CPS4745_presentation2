@@ -11,7 +11,7 @@ This is the sources code for a presentation for CPS4745 (data visualization).
 
 ## Acknowledgments
 References
-*[D3 2d density](https://d3-graph-gallery.com/graph/density2d_shading.html)
+* [D3 2d density](https://d3-graph-gallery.com/graph/density2d_shading.html)
 
 Data Source
-*[2020 Census Data](https://simplemaps.com/data/us-counties)
+* [2020 Census Data](https://simplemaps.com/data/us-counties)

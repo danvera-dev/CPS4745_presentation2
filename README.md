@@ -1,6 +1,6 @@
 # Data Visualization Presentation 2: D3 2d Density
 
-This is the sources code for a presentation for CPS4745 (data visualization).
+This is the source code for a presentation for CPS4745 (data visualization).
 
 ## Description
 

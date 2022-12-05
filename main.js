@@ -10,7 +10,8 @@ let countyCT = "";
 $(document).on('change','#state_select',function(e){
     state_name = $(this).val();
     if(state_name == "empty") { //if empty state_name option is selected the the other dropdown, slider, and chart will be hidden
-        edu_level = "empty"
+        edu_level = "empty";
+        document.getElementById("edu_select").value = "empty";
         clearChart();
         hideForm("eduContainer");
         hideForm("sliderContainer");
@@ -102,6 +103,7 @@ $(document).on('change','#slider',function(e){  //when the slider is adjusted th
                 document.getElementById("CountyCT").innerHTML = "Number of counties in "+state_name+": " + countyCt;
                 pointsPerPixel = sliderVal; 
                 drawMapNew(dataCopy, eduMax, eduMin, hoMax, hoMin, pointsPerPixel); 
+                //return pointsPerPixel;
             } else {
                 alert('Please select a state');
                 document.getElementById("slider").value = "50"; 
@@ -132,6 +134,8 @@ function drawMapNew(data, xMax, xMin, yMax, yMin, pointsPerPixel) {
     
     // read data
     //d3.csv("https://raw.githubusercontent.com/danvera-dev/CPS4745_presentation2/main/uscounties.csv", function(data) { 
+    
+    // Add x axis
     var x = d3.scaleLinear()
         .domain([xMin, xMax])
         .range([ margin.left, width - margin.right ]);
